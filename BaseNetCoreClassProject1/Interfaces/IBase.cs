@@ -4,6 +4,7 @@
     {
         /// <summary>
         /// Primary key for classes
+        /// Line two
         /// </summary>
         public int Id { get; }
     }
