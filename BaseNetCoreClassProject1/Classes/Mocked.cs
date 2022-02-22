@@ -10,9 +10,9 @@ namespace BaseNetCoreClassProject1.Classes
     {
         public static List<Person> People => new()
         {
-            new() { Identifier = 1, FirstName = "Karen", LastName = "Payne"},
-            new() { Identifier = 2, FirstName = "Greg", LastName = "White"},
-            new() { Identifier = 3, FirstName = "Jon", LastName = "Wingett"},
+            new() { Identifier = 1, FirstName = "Karen", LastName = "Payne", PostalCode = 1},
+            new() { Identifier = 2, FirstName = "Greg", LastName = "White", PostalCode = 2},
+            new() { Identifier = 3, FirstName = "Jon", LastName = "Wingett", PostalCode = 3},
         };
 
         public static void Demo()
