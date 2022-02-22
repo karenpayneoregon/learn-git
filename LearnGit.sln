@@ -11,11 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseNetCoreClassProject1", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseCoreUnitTestProject1", "BaseCoreUnitTestProject1\BaseCoreUnitTestProject1.csproj", "{4FF7016E-05B0-4D0D-95A3-936C14999F79}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{094F6537-78CF-44F3-9059-8268FC69D8B2}"
-	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
-	EndProjectSection
-EndProject
+
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F177DD6-C22E-4912-A8CD-6045023C84DC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
