@@ -7,9 +7,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class projects", "Class pro
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit test projects", "Unit test projects", "{695CA6A6-1439-42D3-B186-59B92D31F344}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseNetCoreClassProject1", "BaseNetCoreClassProject1\BaseNetCoreClassProject1.csproj", "{73F578CD-80FB-4B66-BF9A-3CAD6C17FF35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseNetCoreClassProject1", "BaseNetCoreClassProject1\BaseNetCoreClassProject1.csproj", "{73F578CD-80FB-4B66-BF9A-3CAD6C17FF35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BaseCoreUnitTestProject1", "BaseCoreUnitTestProject1\BaseCoreUnitTestProject1.csproj", "{4FF7016E-05B0-4D0D-95A3-936C14999F79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseCoreUnitTestProject1", "BaseCoreUnitTestProject1\BaseCoreUnitTestProject1.csproj", "{4FF7016E-05B0-4D0D-95A3-936C14999F79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{094F6537-78CF-44F3-9059-8268FC69D8B2}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F177DD6-C22E-4912-A8CD-6045023C84DC}"
 	ProjectSection(SolutionItems) = preProject
