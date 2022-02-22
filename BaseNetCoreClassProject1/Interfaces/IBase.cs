@@ -3,7 +3,7 @@
     public interface IBase
     {
         /// <summary>
-        /// Primary key
+        /// Primary key.
         /// </summary>
         public int Id { get; }
     }
