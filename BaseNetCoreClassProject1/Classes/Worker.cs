@@ -11,15 +11,11 @@ namespace BaseNetCoreClassProject1.Classes
     public class Worker
     {
 
-        public static void CompareValue<T>(List<T> sender) where T : class
+        public static void CompareValue<T>(List<T> sender) where T : class, IBase
         {
             foreach (var item in sender)
             {
-                if (item is IBase data)
-                {
-                    Debug.WriteLine(data.Id);
-                }
-
+                Debug.WriteLine(item.Id);
             }
         }
 
