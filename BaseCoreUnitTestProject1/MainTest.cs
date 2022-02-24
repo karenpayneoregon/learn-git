@@ -9,14 +9,14 @@ namespace BaseCoreUnitTestProject1
     public partial class MainTest : TestBase
     {
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
         public void TestMethod1()
         {
 
             var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");
-            if (current is not null)
+            var year = current!.BirthYear;
+            if (year != null)
             {
-                Assert.AreEqual(current.YearOfBirth, 1956);
+                Assert.AreEqual(year, 1956);
             }
 
         }
