@@ -1,4 +1,6 @@
+using System.Linq;
 using BaseCoreUnitTestProject1.Base;
+using BaseNetCoreClassProject1.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace BaseCoreUnitTestProject1
@@ -7,17 +9,18 @@ namespace BaseCoreUnitTestProject1
     public partial class MainTest : TestBase
     {
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
         public void TestMethod1()
         {
-            // arrange
 
+            var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");
+            var year = current!.BirthYear;
+            if (year != null)
+            {
+                Assert.AreEqual(year, 1956);
+            }
 
-            // act
-
-
-            // assert
         }
+
         [TestMethod]
         [TestTraits(Trait.PlaceHolder)]
         public void TestMethod2()
