@@ -4,6 +4,9 @@ namespace BaseNetCoreClassProject1.Classes
 {
     public class Person : IBase
     {
+        /// <summary>
+        /// Primary key
+        /// </summary>
         public int Identifier { get; set; }
         public int Id => Identifier;
         public string FirstName { get; set; }
