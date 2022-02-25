@@ -29,8 +29,10 @@ namespace BaseCoreUnitTestProject1
             var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");
             if (current is not null)
             {
-                Console.WriteLine(current.HireDate);
-
+                if (current.HireDate.HasValue)
+                {
+                    Console.WriteLine(current.HireDate.Value);
+                }
             }
         }
     }
