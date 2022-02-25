@@ -16,7 +16,7 @@ namespace BaseNetCoreClassProject1.Classes
         public string PostalCode { get; set; }
         public int? BirthYear { get; set; }
         public DateTime? HireDate { get; set; }
-
+        public string FullName => $"{LastName} {FirstName}";
         public override string ToString() => $"{Id,-5}{FirstName} {LastName}";
     }
 }
