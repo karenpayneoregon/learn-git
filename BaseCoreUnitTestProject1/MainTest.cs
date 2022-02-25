@@ -10,6 +10,7 @@ namespace BaseCoreUnitTestProject1
     public partial class MainTest : TestBase
     {
         [TestMethod]
+        [TestTraits(Trait.Nullable)]
         public void TestMethod1()
         {
 
@@ -23,7 +24,7 @@ namespace BaseCoreUnitTestProject1
         }
 
         [TestMethod]
-        [TestTraits(Trait.PlaceHolder)]
+        [TestTraits(Trait.Dates)]
         public void TestMethod2()
         {
             var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");

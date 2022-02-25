@@ -11,6 +11,8 @@ namespace BaseCoreUnitTestProject1.Base
         /// Place holder 
         /// </summary>
         PlaceHolder,
+        Dates,
+        Nullable,
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.
