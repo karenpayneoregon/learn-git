@@ -4,6 +4,7 @@
 		<LangVersion>9.0</LangVersion>
 		<TargetFramework>net5.0</TargetFramework>
 		<IsPackable>false</IsPackable>
+		<SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -15,6 +16,7 @@
 
 	<ItemGroup>
 	  <ProjectReference Include="..\BaseNetCoreClassProject1\BaseNetCoreClassProject1.csproj" />
+	  <ProjectReference Include="..\SqlServerAsyncRead\SqlServerAsyncRead.csproj" />
 	</ItemGroup>
 
 </Project>

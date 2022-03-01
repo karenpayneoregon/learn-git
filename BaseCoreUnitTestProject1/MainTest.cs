@@ -1,8 +1,10 @@
 using System;
 using System.Linq;
+using System.Threading.Tasks;
 using BaseCoreUnitTestProject1.Base;
 using BaseNetCoreClassProject1.Classes;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using SqlServerAsyncRead.Classes;
 
 namespace BaseCoreUnitTestProject1
 {
@@ -35,6 +37,23 @@ namespace BaseCoreUnitTestProject1
                     Console.WriteLine(current.HireDate.Value);
                 }
             }
+        }
+
+        [TestMethod]
+        [TestTraits(Trait.NorthWind)]
+        public async Task NorthReadProducts_Good()
+        {
+            DataOperations.RunWithoutIssues = true;
+            DataTableResults results = await DataOperations.ReadTask();
+            Assert.AreEqual(results.HasException, false);
+        }
+        [TestMethod]
+        [TestTraits(Trait.NorthWind)]
+        public async Task NorthReadProducts_Bad()
+        {
+            DataOperations.RunWithoutIssues = false;
+            DataTableResults results = await DataOperations.ReadTask();
+            Assert.AreEqual(results.HasException, true);
         }
     }
 }

@@ -11,11 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseNetCoreClassProject1", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseCoreUnitTestProject1", "BaseCoreUnitTestProject1\BaseCoreUnitTestProject1.csproj", "{4FF7016E-05B0-4D0D-95A3-936C14999F79}"
 EndProject
-
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1F177DD6-C22E-4912-A8CD-6045023C84DC}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlServerAsyncRead", "SqlServerAsyncRead\SqlServerAsyncRead.csproj", "{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +32,10 @@ Global
 		{4FF7016E-05B0-4D0D-95A3-936C14999F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FF7016E-05B0-4D0D-95A3-936C14999F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FF7016E-05B0-4D0D-95A3-936C14999F79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -38,6 +43,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{73F578CD-80FB-4B66-BF9A-3CAD6C17FF35} = {E84F184C-B436-424B-BABA-F15D37FADA7D}
 		{4FF7016E-05B0-4D0D-95A3-936C14999F79} = {695CA6A6-1439-42D3-B186-59B92D31F344}
+		{4CE85A89-1E81-4C27-95F7-76AAF31CF7DE} = {E84F184C-B436-424B-BABA-F15D37FADA7D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {33A38F33-F87D-4731-B89C-D30E4135BAF9}
