@@ -27,6 +27,9 @@ namespace BaseCoreUnitTestProject1
             Assert.AreEqual(current!.BirthYear, 1956);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [TestMethod]
         [TestTraits(Trait.Dates)]
         public void NullableHireDate()
