@@ -20,7 +20,7 @@ namespace BaseNetCoreClassProject1.Classes
 
         public static void Demo()
         {
-            IEnumerable<Person> query = from p in People select p;
+            IEnumerable<Person> query = from person in People select person;
             Worker.CompareValue(People);
 
         }

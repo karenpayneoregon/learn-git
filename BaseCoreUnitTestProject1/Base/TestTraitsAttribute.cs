@@ -13,7 +13,8 @@ namespace BaseCoreUnitTestProject1.Base
         PlaceHolder,
         Dates,
         Nullable,
-        NorthWind
+        NorthWind,
+        PlayingAround
     }
     /// <summary>
     /// Declarative class for using Trait enum about for traits on test method.

@@ -8,6 +8,7 @@ namespace BaseCoreUnitTestProject1.Base
         protected TestContext TestContextInstance;
         public TestContext TestContext
         {
+
             get => TestContextInstance;
             set
             {

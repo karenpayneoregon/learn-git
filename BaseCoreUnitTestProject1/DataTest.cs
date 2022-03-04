@@ -10,25 +10,9 @@ using SqlServerAsyncRead.Classes;
 namespace BaseCoreUnitTestProject1
 {
     [TestClass]
-    public partial class MainTest : TestBase
+    public partial class DataTest : TestBase
     {
-        [TestMethod]
-        [TestTraits(Trait.Nullable)]
-        [Ignore]
-        public void NonNullableBirthYear()
-        {
-            var current = _peopleList.FirstOrDefault(person => person.FirstName == "Karen");
-            Assert.AreEqual(current!.BirthYear, 1956);
-        }
 
-        [TestMethod]
-        [TestTraits(Trait.Dates)]
-        [Ignore]
-        public void NullableHireDate()
-        {
-            var current = _peopleList.FirstOrDefault(person => person.FirstName == "Karen");
-            Assert.IsTrue(current.HireDate.HasValue);
-        }
 
         [TestMethod]
         [TestTraits(Trait.NorthWind)]
@@ -45,14 +29,17 @@ namespace BaseCoreUnitTestProject1
         {
             DataOperations.RunWithoutIssues = false;
             var ( _ , success) = await _dataOperations.ReadTask(_cancellationTokenSource.Token);
+
             Assert.AreEqual(success, false);
+
         }
 
         [TestMethod]
         [TestTraits(Trait.NorthWind)]
+        [Ignore]
         public void NorthFoolish()
         {
-            var result = _dataOperations.FoolishAttemptToConnect();
+            bool result = _dataOperations.FoolishAttemptToConnect();
             Assert.AreEqual(result, false);
         }
 

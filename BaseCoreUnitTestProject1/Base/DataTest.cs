@@ -1,25 +1,23 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using BaseCoreUnitTestProject1.Base;
 using BaseNetCoreClassProject1.Classes;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NLog;
 using NLog.Extensions.Logging;
-using NLog.Targets;
 using SqlServerAsyncRead.Classes;
 using SqlServerAsyncRead.Interfaces;
 using LogLevel = Microsoft.Extensions.Logging.LogLevel;
 
 
-// ReSharper disable once CheckNamespace - do not change
+
+// ReSharper disable once CheckNamespace
 namespace BaseCoreUnitTestProject1
 {
-    public partial class MainTest
+    public partial class DataTest
     {
         /// <summary>
         /// See notes in <see cref="Initialization"/> for usage
@@ -58,7 +56,11 @@ namespace BaseCoreUnitTestProject1
                 .CreateLogger<DataOperations>();
 
             // disable all logging
-            //LogManager.DisableLogging();
+            //if (true)
+            //{
+            //    LogManager.DisableLogging();
+            //}
+            
 
             // how to dynamically change a log file name by, in this case environment
             //var target = (FileTarget)LogManager.Configuration.FindTargetByName("development");
@@ -86,7 +88,7 @@ namespace BaseCoreUnitTestProject1
                  *
                  * For a real application the time-out would be more like 1 or 2 seconds
                  */
-                _cancellationTokenSource = new(TimeSpan.FromSeconds(4));
+                _cancellationTokenSource = new(TimeSpan.FromSeconds(1));
 
 
                 LogConfiguration();
@@ -104,7 +106,7 @@ namespace BaseCoreUnitTestProject1
         [ClassInitialize()]
         public static void ClassInitialize(TestContext testContext)
         {
-            TestResults = new List<TestContext>();
+            TestBase.TestResults = new List<TestContext>();
             _peopleList = Mocked.People;
         }
     }
