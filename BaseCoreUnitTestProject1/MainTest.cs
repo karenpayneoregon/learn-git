@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using BaseCoreUnitTestProject1.Base;
@@ -13,30 +14,20 @@ namespace BaseCoreUnitTestProject1
     {
         [TestMethod]
         [TestTraits(Trait.Nullable)]
-        public void TestMethod1()
+        [Ignore]
+        public void NonNullableBirthYear()
         {
-
-            var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");
-            var year = current!.BirthYear;
-            if (year != null)
-            {
-                Assert.AreEqual(year, 1956);
-            }
-
+            var current = _peopleList.FirstOrDefault(person => person.FirstName == "Karen");
+            Assert.AreEqual(current!.BirthYear, 1956);
         }
 
         [TestMethod]
         [TestTraits(Trait.Dates)]
-        public void TestMethod2()
+        [Ignore]
+        public void NullableHireDate()
         {
-            var current = Mocked.People.FirstOrDefault(person => person.FirstName == "Karen");
-            if (current is not null)
-            {
-                if (current.HireDate.HasValue)
-                {
-                    Console.WriteLine(current.HireDate.Value);
-                }
-            }
+            var current = _peopleList.FirstOrDefault(person => person.FirstName == "Karen");
+            Assert.IsTrue(current.HireDate.HasValue);
         }
 
         [TestMethod]
@@ -44,16 +35,26 @@ namespace BaseCoreUnitTestProject1
         public async Task NorthReadProducts_Good()
         {
             DataOperations.RunWithoutIssues = true;
-            DataTableResults results = await DataOperations.ReadTask();
-            Assert.AreEqual(results.HasException, false);
+            var ( _ , success) = await _dataOperations.ReadTask(_cancellationTokenSource.Token);
+            Assert.AreEqual(success, true);
+            Debug.WriteLine(success);
         }
         [TestMethod]
         [TestTraits(Trait.NorthWind)]
         public async Task NorthReadProducts_Bad()
         {
             DataOperations.RunWithoutIssues = false;
-            DataTableResults results = await DataOperations.ReadTask();
-            Assert.AreEqual(results.HasException, true);
+            var ( _ , success) = await _dataOperations.ReadTask(_cancellationTokenSource.Token);
+            Assert.AreEqual(success, false);
         }
+
+        [TestMethod]
+        [TestTraits(Trait.NorthWind)]
+        public void NorthFoolish()
+        {
+            var result = _dataOperations.FoolishAttemptToConnect();
+            Assert.AreEqual(result, false);
+        }
+
     }
 }

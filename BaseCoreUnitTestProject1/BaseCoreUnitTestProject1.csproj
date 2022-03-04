@@ -18,5 +18,7 @@
 	  <ProjectReference Include="..\BaseNetCoreClassProject1\BaseNetCoreClassProject1.csproj" />
 	  <ProjectReference Include="..\SqlServerAsyncRead\SqlServerAsyncRead.csproj" />
 	</ItemGroup>
-
+	<Target Name="MakeLogFolder" AfterTargets="Build">
+		<MakeDir Directories="$(OutDir)Logs" />
+	</Target>
 </Project>

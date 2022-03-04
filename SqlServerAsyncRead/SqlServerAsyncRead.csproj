@@ -4,7 +4,34 @@
 		<LangVersion>9.0</LangVersion>
 		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <NoWarn>1701;1702;CS1998</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Information\readme.md" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Include="Information\readme.md" />
+	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="NLog" Version="4.7.14" />
+		<PackageReference Include="NLog.Extensions.Logging" Version="1.7.4" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="nlog.config">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="bin\Debug\net5.0\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\StopWatchLibrary\StopWatchLibrary.csproj" />
 	</ItemGroup>
 </Project>
