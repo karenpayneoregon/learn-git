@@ -23,6 +23,7 @@ namespace BaseCoreUnitTestProject1
             Assert.AreEqual(success, true);
             Debug.WriteLine(success);
         }
+
         [TestMethod]
         [TestTraits(Trait.NorthWind)]
         public async Task NorthReadProducts_Bad()
