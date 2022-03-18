@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SqlServerAsyncRead", "SqlSe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StopWatchLibrary", "StopWatchLibrary\StopWatchLibrary.csproj", "{50CA1D80-5FD5-4757-8FE6-4FE57FCAC50B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoFormProject", "DemoFormProject\DemoFormProject.csproj", "{837EECA3-A0D7-4652-B45B-7B6170D4BBC0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{50CA1D80-5FD5-4757-8FE6-4FE57FCAC50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50CA1D80-5FD5-4757-8FE6-4FE57FCAC50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50CA1D80-5FD5-4757-8FE6-4FE57FCAC50B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{837EECA3-A0D7-4652-B45B-7B6170D4BBC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{837EECA3-A0D7-4652-B45B-7B6170D4BBC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{837EECA3-A0D7-4652-B45B-7B6170D4BBC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{837EECA3-A0D7-4652-B45B-7B6170D4BBC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
